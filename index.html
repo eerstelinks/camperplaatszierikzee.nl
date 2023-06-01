@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6" lang="nl"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="nl"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="nl"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" lang="nl"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="" lang="nl"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Camperplaats Zierikzee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="eerstelinks.nl">
+    <link href="img/favicon.ico.png" rel="shortcut icon">
+
+    <!-- Le styles -->
+    <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.min.css" rel="stylesheet">
+
+    <link href="style/is-visitor%EF%B9%96v=1404163564.css" rel="stylesheet">
+    <link href="assets/fontselect-jquery-plugin/fontselect.css" rel="stylesheet">
+    <link href="css/cache/camperplaatszierikzee/1673099688.css" rel="stylesheet">
+
+
+    <script type="text/javascript">
+        var apiURL        = 'http://camperplaatszierikzee.nl/api/v1/';
+        var pathname      = 'camperplaatszierikzee';
+        var alignSexies   = [];
+        var currentLang   = 'nl';
+        var supportedLang = {"nl":{"text":"Nederlands","locale":"nl_NL"},"en":{"text":"English","locale":"en_GB"},"fr":{"text":"Fran\u00e7ais","locale":"fr_FR"},"de":{"text":"Deutsch","locale":"de_DE"},"es":{"text":"Espa\u00f1ol","locale":"es_ES"},"cz":{"text":"\u010ce\u0161tina","locale":"cs_CZ"}};
+        var lang          = {"form":{"modal":{"title":"Wijzig formulier","choose_form":"Kies een formulier","no_title":"Vul een titel in","no_text":"Vul een tekst in","no_title_and_no_text":"Vul een titel en een text in"},"messages":{"send_failure":"Dit formulier kan niet worden opgestuurd, neem contact op.","save_failure":"Mislukt om formlier op te slaan, mail ons even","field_is_required":"verplicht veld","fill_in_fields":"Vul wel alle verplichte velden in, deze zijn aangegeven met een asterisk (*)","no_formname":"Vul een naam in zodat het formulier later nogmaals gebruikt kan worden","invalid_formtype":"Dit type formulier is niet geldig, e-mail ons voor hulp","no_formtype":"Kies een formulier-type","no_product":"Je hebt een bestelformulier geselecteerd, maar geen producten toegevoegd. Voeg een product toe.","no_fields_selected":"Selecteer minimaal 1 veld wat een bezoeker kan invullen bij contactgegevens","no_email":"Vul een e-mailadres in. De inhoud van het formulier wordt daarnaartoe gestuurd.","no_valid_email":"Vul een geldig e-mailadres in. Anders kan je geen berichten niet ontvangen.","no_productname":"Geef je producten een naam"},"buttons":{"send":"Verstuur","close":"Sluiten","order":"Bestel","contact":"Contact","newsletter":"Nieuwsbrief"},"fields":{"name":{"text":"Naam","placeholder":"Naam"},"company":{"text":"Bedrijfsnaam","placeholder":"Naam"},"street":{"text":"Straat + nr.","placeholder":"Adres"},"zipcode":{"text":"Postcode","placeholder":"Postcode"},"city":{"text":"Plaats","placeholder":"Plaats"},"phone":{"text":"Telefoon","placeholder":"+31(0)10-000000"},"email":{"text":"E-mail","placeholder":"e-mail@adres.nl"},"custom":{"text":"Aangepast veld","placeholder":""},"questions":{"text":"Vragen","placeholder":"..."},"remarks":{"text":"Opmerkingen","placeholder":"..."},"other":{"ordered_products":"<p>Bestelde producten:<\/p>","thankyou":"Het formulier is ontvangen.","mail_subject_filled_form":"Ingevuld formulier op ","mail_content_filled_form":"<p>Beste %s,<\/p><p>Op %s is het formulier met de naam %s ingevuld. Dit zijn de gegevens:<\/p>"}}},"plaintext":{"messages":{"no_text":"Vul wel een tekst in"}},"video":{"messages":{"wrong_platform":"Je kan alleen Youtube en Vimeo filmpjes gebruiken. Voer de link (url) in van de pagina van het filmpje."}},"location":{"error_messages":{"wrong_zipcode":"De postcode moet bestaan uit 6 tekens: 1234AB","no_fields":"Vul minimaal 1 veld in"}},"image":{"error_messages":{"save_image_failure":"Mislukt om de bewerkte foto op te slaan","too_large":"Deze afbeelding is te groot, max %d MB","vague":"Er ging iets mis, probeer ander bestand","file_type_failure":"Er gaat iets mis met dit type bestand","aviary_warning":"Het kan zijn dat het bewerken van afbeeldingen tijdelijk niet kan"},"messages":{"upload_image":"Upload een afbeelding (.gif, .jpg, .jpeg of .png)"}},"hours":{"wrong_closure_time":"Sluitingstijd ligt voor de openingstijd op ","closed":"gesloten","by_appointment":"op afspraak"},"date":{"today":"vandaag","days":{"monday":"maandag","tuesday":"dinsdag","wednesday":"woensdag","thursday":"donderdag","friday":"vrijdag","saturday":"zaterdag","sunday":"zondag"}},"document":{"upload_pdf":"Upload een .pdf-bestand"},"favicon":{"upload_ico":"Upload een .ico-bestand"},"contact":{"address":"Adres","phone":"Telefoon","email":"E-mail"},"error_messages":{"file_too_large":"Dit bestand is te groot!","logged_out":"Je bent uitgelogd, log opnieuw in","missing_website":"Je website is niet gevonden","no_id":"Er is geen ID meegegeven","no_block_id":"No block ID defined","no_block_found":"No block found with this ID: ","invalid_id_get":"ID is not valid in GET request","no_website_id":"No website ID found in URL","no_table_found":"Table for block not found: ","no_sexy_id":"Geen sexy ID gevonden","no_sexy":"Geen sexy gevonden","required_fields":"Heb je alle verplichte velden ingevuld?","no_sexy_created":"Maak eerst een nieuwe sectie aan","no_website_created":"Het lijkt er op dat er geen website is aangemaakt","no_column_created":"Maak eerst een nieuwe kolom aan","media_undefined":"Geef wel aan of dit een media-element is","inexistent_column":"Deze kolom bestaat niet, probeer een andere","inexistent_sexy":"Deze sectie bestaat niet, probeer een andere","no_data_found":"Whoepsie, geen gegevens gevonden","element_failure":"Sorry, dit element kan je nog niet bewerken","change_failure":"Deze wijziging komt niet goed door","wrong_request":"The AJAX request is wrong and cannot be answered","delete_element_failure":"Er zijn geen elementen verwijderd","delete_sexy_failure":"Er zijn geen secties verwijderd","no_email":"Vul wel een e-mailadres in","wrong_email":"Dit e-mailadres kan geen e-mails ontvangen, gebruik een echt e-mailadres'","no_email_no_password":"Vul wel je e-mailadres en je wachtwoord in!","spambot":"Je lijkt een spambot","signup_failure":"Mislukt om je aan te melden, mail ons even","cookies":"Het lijkt erop dat je cookies blokkeert, herlaad de pagina.","save_to_database":"Het opslaan in de database is niet gelukt","vague":"Er gaat iets mis!"},"column_change":{"error_messages":{"no_side_chosen":"Geef wel een zijde aan waar de kolom moet komen","max_6_columns":"Er mogen maximaal 6 kolommen geplaatst worden","add_column_failure":"Het toevoegen van de kolom is niet helemaal gelukt"}},"save_demo":{"error_messages":{"no_email":"Vul wel een e-mailadres in, anders kunnen we je jouw site niet opslaan.","no_valid_email":"Vul wel een geldig e-mailadres in","no_valid_email_in_the_end":"Het lijkt erop dat jouw e-mailadres niet klopt, probeer het met een ander e-mailadres."},"messages":{"website_saved_header":"Jouw website is opgeslagen!","website_saved_message":"<p>Houd de inbox van <em>%s<\/em> in de gaten, er is een e-mail met verdere instructies verzonden.<\/p>","confirmation_email_subject":"Jouw eerstelinks website is opgeslagen","confirmation_email_content":"<p>Hoi %s,<\/p><p>Leuk dat je met ons product aan de slag bent gegaan! Je website is opgeslagen en zal 10 dagen gratis online staan. Om de website later te kunnen wijzigen (en voor de mobiele app) heb je een wachtwoord nodig.<\/p><p><em>Dit wachtwoord kan je aanmaken via de onderstaande link:<\/em><br><a href='http:\/\/eerstelinks.nl\/opslaan\/%s\/%s'>Maak een persoonlijk wachtwoord aan<\/a><\/p><p>Met de app (download hem <a href='http:\/\/eerstelinks.nl\/app'>hier<\/a>) kun je foto's direct vanaf je telefoon op je website plaatsen!<\/p><p>Zelf vinden we ons product fantastisch en we doen er alles aan om ervoor te zorgen dat jij dat ook vindt. Dus als je vragen of opmerkingen hebt horen wij die graag. Je kan ons bereiken via <a href='https:\/\/twitter.com\/eerstelinks'>Twitter<\/a>, <a href='https:\/\/facebook.com\/eerstelinks'>Facebook<\/a> of via <a href='mailto:info@eerstelinks.nl'>e-mail<\/a>.<\/p>"}},"general_settings":{"no_website_name":"Je website heeft een naam nodig!","no_language":"Selecteer minimaal 1 taal"},"signup":{"fill_or_skip":"Vul alle velden in of sla deze stap over","invalid_pathname":"De website link is niet geldig. Probeer iets anders, bijvoorbeeld %s","occupied_pathname":"Deze link is al bezet, kies een andere","no_website_found":"Geen website gevonden met deze code, het kan zijn dat je al een wachtwoord gekozen hebt.","confirmation_email_subject":"Account gegevens voor eerstelinks","confirmation_email_content":"<p>Je account is opgeslagen en dit zijn je gegevens:<\/p><p><ul><li>Website: <a href='%s'>%s<\/a><\/li><li>Gebruikersnaam: %s<\/li><li>Wachtwoord: %s<\/li><\/ul><\/p><p>Je kunt nu inloggen op je eigen website en op onze <a href='http:\/\/eerstelinks.nl\/app'>mobiele app<\/a>. Je website is 10 dagen gratis, daarna gaan we je vragen om een pakket te kiezen. Je kunt <a href='http:\/\/eerstelinks.nl\/#prijzen'>hier<\/a> meer informatie vinden en eventueel alvast een keuze maken.<\/p><p>Dit willen we nog even zeggen: We helpen je graag. Samen met jou willen we een top-website bouwen. Aarzel dan ook niet om je vragen en opmerkingen naar ons door te sturen via <a href='https:\/\/twitter.com\/eerstelinks'>Twitter<\/a>, <a href='https:\/\/facebook.com\/eerstelinks'>Facebook<\/a> of <a href='mailto:info@eerstelinks.nl'>e-mail<\/a><\/p>","signup_success":"Je aanmelding is verwerkt, we nemen snel contact met je op!"},"premium_feature":{"no_name":"De naam van deze feature is niet gevonden","feature_not_found":"Deze feature is niet gevonden, waarschijnlijk is het verlopen","feature_active":"Deze feature is al actief","one_language":"Deze feature kan alleen uitgezet worden als er 1 taal is geselecteerd. Selecteer 1 taal, klik op 'Opslaan' en keer terug naar dit venster om de feature uit te zetten.","activation_email_subject":"De betaalde feature %s is geactiveerd","activation_email_content":"<p>Niets is vervelender dan onverwachte kosten, dus lees deze e-mail goed!<\/p><p>Je hebt zojuist de %s-feature geactiveerd. Dit is een premium-feature en deze kost &euro; %g (excl. BTW) per maand.<\/p><p>De 1<sup>e<\/sup> dag is gratis en zet je de feature vandaag weer uit, dan worden er ook geen kosten berekend.<\/p><p>Besluit je om de feature te blijven gebruiken, dan worden de extra kosten per dag berekend en deze worden tegelijk gefactureerd met de normale abonnementskosten. Betaal je per jaar, dan worden de kosten aan het eind van het betaaljaar in rekening gebracht. Betaal je per maand, dan verschijnen de kosten op de rekening van elke volgende maand.<\/p><p>Is er iets niet helemaal duidelijk, neem dan contact met ons op via <a href='https:\/\/twitter.com\/eerstelinks'>Twitter<\/a>, <a href='https:\/\/facebook.com\/eerstelinks'>Facebook<\/a> of <a href='mailto:info@eerstelinks.nl'>e-mail<\/a>. Wij helpen je graag!<\/p>"},"sexy":{"no_sexy_name":"Vergeet niet om deze sectie een naam te geven. Deze zal zichtbaar zijn in de navigatiebalk"},"tutorial":{"oops":"Oeps, dit kunnen we niet opslaan, of het heeft dezelfde waarde"},"devicechecker":{"outdated_browser_message":"Jouw versie van %s is verouderd! <a href='%s' target='_blank'>Download een nieuwe versie<\/a> voor optimaal gebruik."},"light_in_the_dark":{"step1":"Geef je website hier een naam","step2":"Vul hier de naam van jouw website in","step3":"Klik hier om de gegevens op te slaan","step4":"Hier maak je een pagina aan, wij noemen dat secties","step5":"Vul hier een sectie-naam in, bijvoorbeeld: Welkom","step6":"Klik hier om een achtergrond te kiezen","step7":"Upload een foto van je computer","step8":"Laten we hier wat tekst toevoegen!'","step9":"Klik op deze knop","step10":"Leg kort uit waarom ik deze site straks ga bezoeken","step11":"Laten we hier een foto toevoegen!","step12":"Klik op deze knop","step13":"Zo, nu is het tijd om je site op te slaan!<br><a href='javascript:void(0)' class='btn btn-inverse btn-mini restart-tutorial'><i class='icon-repeat'><\/i> Begin rondleiding opnieuw<\/a>'"},"website2":{"create_sexy":"sectie","logout":"Uitloggen","login_email":"e-mailadres","login_email_placeholder":"je-email@adres.nl","login_password":"wachtwoord","loading":"laden...","move_column_left":"Verplaats kolom naar links","move_column_right":"Verplaats kolom naar rechts","delete_column":"Verwijder deze kolom","add_column":"Voeg kolom toe","add_element":"Voeg een element toe"},"common_functions":{"no_module":"<p>Het lijkt erop dat we nog geen module hebben voor het %s type<\/p>","reload_page":"Herlaad de pagina","address_change":"<td>Wijzig hier je adres<\/td>","facebook_url_not_found":"Facebook URL niet gevonden, wijzig dit","untranslated_text":"Deze tekst is nog niet vertaald, klik op de tekst om het te vertalen. <small>(dit bericht is niet zichtbaar voor bezoekers)<\/small>","signature":"<p>Met vriendelijke groet,<\/p>"},"login":{"general_error":"Er gaat iets met met inloggen, contact us for help","no_connection":"Kan geen verbinding tot stand brengen, contacteer de gratis helpdesk","no_hash":"Wachtwoord kan niet gehashd worden","send_session":"Stuur een sessie mee","no_session_found":"Geen sessies gevonden","login_failure":"Inloggen is mislukt, probeer opnieuw"},"order":{"script_failure":"Het script kan de volgorde niet uitlezen","save_failure":"Mislukt om de sectie-volgorde op te slaan","save_element_order_failure":"Het is niet gelukt de volgorde van elementen op te slaan","no_data":"We hebben geen data ontvangen","function_not_ready":"Deze functie is niet af"}};
+    </script>
+
+</head>
+
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="#">Camperplaats Zierikzee</a>
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li><a href="#welkom">Welkom</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#fotos">Foto's</a></li>
+                    </ul>
+                    <ul class="nav pull-right">
+                                                <li>
+                            <a href="javascript:void(0)" class="toggle-toolbox hidden-phone"><i class="icon-wrench icon-white"></i> </a>
+
+                    </ul>
+                </div><!-- /.nav-collapse -->
+            </div>
+
+            <!-- This is to enter your details to log in to the awesome -->
+            <div class="toolbox hidden-phone container">
+                <form class="form-inline login-form" method="post">
+                    <div class="alert alert-info inlog-error">Jouw versie van deze browser is bij ons onbekend of is verouderd! <a href='http://browsehappy.com/' target='_blank'>Download een nieuwe versie</a> voor optimaal gebruik.</div>                    <input type="hidden" name="pathname" value="camperplaatszierikzee" />
+
+                    <label>e-mailadres</label>
+                    <input type="email" name="username" value="" placeholder="je-email@adres.nl" />
+
+                    <label>wachtwoord</label>
+                    <input type="password" name="password" placeholder="" />
+
+                    <input type="submit" value="log in" class="btn btn-success" />
+                    <img class="default-hide loader-login loader" src="img/loader.gif" alt="laden..." />
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- for modals -->
+    <div class="modal-container"></div>
+
+    <!-- for aviary -->
+    <div id='injection_site'></div>
+
+        <div class="sexy" id="sexy_52">
+            <div class="jump-to" id="welkom"></div>
+            <div class="glasses">
+                <div class="sexy-up default-hide"><a href="#"><i class="icon-circle-arrow-up"></i></a></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="span12">
+                            <ul class="row inner">
+<li class="span8 lovebox" data-column="47"><div class="drag"></div><ul class="shell"><li class="editable" id="1393">
+<h3>Camperplaats De Zandweg</h3><p><br>Er is een mooie camperplaats nabij de monumentenstad Zierikzee, op Schouwen-Duiveland.  De camperplaats is gelegen vlakbij het gemeentehuis in Noordwestelijke richting, naast de hoofdweg N59. De loopafstand naar het centrum is ongeveer 15 minuten. De camperplaats is vlakbij het natuurgebied Plan Tureluur  waar veel fiets en wandelmogelijkheden zijn, of buitendijks fietsen langs de Oosterschelde <br>Alle basisvoorzieningen zijn aanwezig, vuilwater en chemisch toilet lozen, verswater innemen, stroom, vuilstort en Wifi, alles in de priijs inbegrepen, maximale verblijfsduur is 72 uur. Op verzoek mag u langer blijven.</p><p>Ook voor de grotere campers >10t en >10 mtr is er plaats, er zijn enkele plaatsen waar ook de grootste campers kunnen overnachten.  Er is parkeermogelijkheid op het aangrenzende (eigen) parkeerterrein voor een 2e voertuig of aanhanger.</p><p><b>Fietsliefhebbers</b><br></p><p>Voor de liefhebbers van fietsen zijn er  mooie route's uitgezet, waaruit u zelf een keuze kunt maken, de afstanden zijn; 18km, 28km, 31km, 32 km, 34km en 53 en 56km. Deze routes lopen soms deels buitendijks, of langs bijvoorbeeld het watersnoodmuseum, een buitendijks restaurant of door het vogelgebied       plan  Tureluur.</p><p>Bij het informatiebord vindt u  een overzichtskaart van het eiland, en de aparte routes, deze zijn gratis beschikbaar voor onze gasten.</p><p><b>Vogelaars</b></p><p>Het natuurpark Oosterschelde, en het Plan Tureluur brengt een veelvoud aan vogelsoorten naar ons mooie eiland. Met de auto of de fiets kun je de soortenrijkdom ontdekken.</p><p>Vlak bij de camperplaats ( ca 1 km lopen) wandel je het natuurgebied in dat in 2014 is aangelegd en ontwikkeld.  Middenin dit gebied bevindt zich een uitkijkpost waar je rondom de flora en fauna kun bewonderen. Op het infobord kun je zien waar het zich bevindt.</p><p></p><p></p><p></p><p>Op Maandagmorgen, Vrijdagmiddag en Zaterdagmorgen is er een tweedehandswinkel open op het terrein, met kleding, boeken en snuisterijen<br></p><p><b>Diverse markten</b></p><p>Iedere Donderdag is er weekmarkt in het centrum van Zierikzee.<br><br>Op Dinsdag is er 6x, in de maanden Juli en Augustus, toeristendag, met allerlei<br>marktjes, en kleine evenementen in een deel van de binnenstad<br><br>Iedere Woensdag in de maanden Juli en Augustus is er een brocante en tweedehands markt op het evenementen terrein Kloet, aan het Eerste Weegje, nabij de jachthaven. (ca 15 min. lopen) </p><p><b>Jaarmarkt</b></p><p>Iedere 1e Woensdag in Juni is er een jaarmarkt/paarden markt, met allerlei kraampjes, activiteiten en oude ambachten.</p><p><b>Palingroken</b></p><p>In Kerkwerve (dorp ca 3 km verderop) worden iedere eerste zaterdag van augustus de kampioenschappen palingroken gehouden. Ook zijn er allerlei kraampjes, miniatuurstoomtrein etc. Dit alles vindt plaats op de boerderijcamping Van Langeraad.</p><p><b>Zwemmen</b><br>Nieuw zwembad en sporthal op 1.5 km, dit complex is in 2014 geopend en ligt ten Oosten van de Camperplaats. Op het info bord wordt de locatie aangegeven.</p><p>Ook zwemmen in de Oosterschelde is mogelijk. Op het infobord vindt u twee plaatsen aan de dijk waar zich een klein strandje bevindt en waar door de lokale bevolking in de zomer wordt gezwommen. U hoeft niet perse naar de drukke stranden aan de kust.</p><p>U bereikt deze plaatsen ook als u de buitendijkse fietsroutes volgt.</p><p><b>Eten en drinken</b></p><p>Culinair, in de binnenstad, en aan de haven, en bij de Zuidhavenpoort,  bevinden zich veel restaurants, u kunt altijd slagen, er is voor iedereen wel wat dat in de smaak valt.</p><p><b>Film kijken ?</b></p><p>Nabij de grote DIKKE toren, Zuidzijde bevindt zich een klein filmtheater, het heet Fizi.  Op <a href="http://www.Fizi.nl" target="_blank">www.Fizi.nl</a> kunt u het programma zien.<br></p>
+</li></ul></li><li class="span4 art editable"  id="1954" style="background-image: url(images/camperplaatszierikzee_20130517135201.jpg);" data-column="46"><div class="drag"></div></li>                            </ul>
+                        </div>
+                    </div>
+                </div>  <!-- /container -->
+                <div class="sexy-down "><a href="#contact"><i class="icon-circle-arrow-down"></i></a></div>
+
+            </div>  <!-- /glasses -->
+        </div>  <!-- /sexy -->
+
+        <div class="sexy" id="sexy_53">
+            <div class="jump-to" id="contact"></div>
+            <div class="glasses">
+                <div class="sexy-up "><a href="#welkom"><i class="icon-circle-arrow-up"></i></a></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="span12">
+                            <ul class="row inner">
+<li class="span5 art editable"  id="1406" style="background-image: url(images/camperplaatszierikzee_20130423031214.jpg);" data-column="48"><div class="drag"></div></li><li class="span7 lovebox" data-column="49"><div class="drag"></div><ul class="shell"><li class="editable" id="1397">
+<h4>Contactgegevens</h4>
+</li><li class="editable" id="1396">
+<table class="table locationtable">
+<tr>
+<td>Adres:</td>
+<td>
+<span class="address-street">Zandweg</span>
+<span class="address-number">30</span>
+<br />
+<span class="address-postalcode">4301TA</span>
+<span class="address-city" id="address-city">Zierikzee</span>
+</td>
+</tr>
+<tr>
+<td>E-mail:</td>
+<td>
+<span class="address-email"><script type='text/javascript'>var r = 'hr' + 'ef='; var s = 'ma' + 'ilto';var m = "<a "+r+'"'+s+':Zan'+'dweg30'+('a@bc.nl').charAt(1)+'zeelandn'+'et'+'.'+'nl">'+'Zan'+'dweg30'+('a@bc.nl').charAt(1)+'zeelandn'+'et'+'.'+'nl'+'</a>';document.write(m)</script></span>
+</td>
+</tr>
+</table>
+</li><li class="editable" id="1736">
+<p>Telefoon: 0111-415326  <br>                06-53111740</p><p><b> (reserveren is niet mogelijk)</b><br></p><p>Zeeland         </p><p>Nederland</p><p>De GPS codes zijn N 51.65690   E 3.91233 C</p><p> Betaling via Camperpay of de parkeerautomaat dmv bankpas of creditcard</p><p><a target="_blank" href="http://www.campercontact.nl">www.campercontact.nl</a></p><p><br></p>
+</li><li class="editable" id="1395">
+<h4><b></b>Openingstijden en prijzen</h4><p>De camperplaats is 365 dagen per jaar open. De camperplaats is "vorstbestendig" alle voorzieningen voor water etc. zijn ook tijdens vorstperioden beschikbaar. Er is geen douche en geen toiletvoorziening.<br>Stroomvoorziening 10 Amp<br>De prijs per overnachting is € 14.25, inclusief stroom, water, lozen afvalwater en toilet, en inclusief Wifi.</p><p>Toeristenbelasting  € 2.04 per persoon (hoog seizoen 01-05 tm 31-08<br></p><p>Toeristenbelasting  € 1.83 per persoon (laag seizoen  01-09 tm 30-04</p><p>Betaling via Camperpay of de parkeerautomaat dmv bankpas of creditcard</p><p>Bij storing Bankrekening NL91INGB0681645512</p><p>Alleen lozen en vers water  is ook mogelijk, kosten,  3,- euro, dit is alleen voor toepassing als servicestation voor passanten.</p><p>Er zijn geen vaste aankomst of vertrektijden.</p><p><br><br></p>
+</li></ul></li>                            </ul>
+                        </div>
+                    </div>
+                </div>  <!-- /container -->
+                <div class="sexy-down "><a href="#fotos"><i class="icon-circle-arrow-down"></i></a></div>
+
+            </div>  <!-- /glasses -->
+        </div>  <!-- /sexy -->
+
+        <div class="sexy" id="sexy_123">
+            <div class="jump-to" id="fotos"></div>
+            <div class="glasses">
+                <div class="sexy-up "><a href="#contact"><i class="icon-circle-arrow-up"></i></a></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="span12">
+                            <ul class="row inner">
+<li class="span12 art album editable" id="5568" style="background-color: #333333;" data-column="2603"><div class="drag"></div><div class="gallery1"><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115051.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115051.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115109.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115109.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115118.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115118.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115127.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115127.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115149.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115149.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115157.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115157.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115207.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115207.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115217.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115217.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115251.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115251.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115241.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115241.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115303.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115303.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115312.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115312.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115321.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115321.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115330.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115330.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115340.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115340.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115358.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115358.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115410.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115410.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115420.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115420.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115430.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115430.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115444.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115444.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115505.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115505.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115527.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115527.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115539.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115539.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115553.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115553.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115631.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115631.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115645.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115645.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115658.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115658.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115709.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115709.jpg" /></a></div><div class="thumbnail-wrapper"><div class="thumbnail-overlay"><p></p></div><a class="fancybox" rel="gallery5568" href="image/1000/1000/uploads/images/camperplaatszierikzee_20150923115720.jpg" data-fancybox-title=""><img src="image/500/500/uploads/images/camperplaatszierikzee_20150923115720.jpg" /></a></div></div></li>                            </ul>
+                        </div>
+                    </div>
+                </div>  <!-- /container -->
+                <div class="sexy-down default-hide"><a href="#"><i class="icon-circle-arrow-down"></i></a></div>
+
+            </div>  <!-- /glasses -->
+        </div>  <!-- /sexy -->
+
+
+<script src="assets/jquery/jquery-1.8.2.min.js"></script>
+<script src="assets/jquery/jquery-ui-1.10.2.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min%EF%B9%96v2.3.1.js"></script>
+<script src="assets/fancybox/jquery.fancybox.pack%EF%B9%96v2.1.4.js"></script>
+
+<script src="js/base.js"></script>
+
+<!-- making the galleries work, this should be above genesis, because
+genesis must still resize the sexy-height afterwards -->
+<script src="js/gallery.js"></script>
+
+<script type="text/javascript">
+<!--
+    var width = window.innerWidth || document.documentElement.clientWidth;
+    if (width >= 768) {
+        document.write('<script type="text/javascript" src="/js/genesis.js"></script>');
+    }
+-->
+</script>
+
+<!-- javascript visible for visiters -->
+<script src="js/visitors.js"></script>
+
+<!-- login script for in toolbar -->
+<script src="js/login.js"></script>
+
+<!-- making the slideshows work -->
+<script src="js/slideshow.js"></script>
+
+<!-- we don't collect your personal data like IP address -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-37603858-7');
+    ga('set', 'anonymizeIp', true);
+    ga('send', 'pageview');
+</script>
+
+</body>
+</html>

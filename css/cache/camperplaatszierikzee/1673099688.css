@@ -1,0 +1,58 @@
+.sexy#sexy_52 {
+    background-image: url(http://eerstelinks.nl/images/camperplaatszierikzee_20130423031047.jpg);
+    color: #333333;
+}
+
+    .sexy#sexy_52 .glasses {
+        background-color: rgba(230, 226, 213, 0.85);
+    }
+
+        html.ie6 .sexy#sexy_52 .glasses,
+        html.ie7 .sexy#sexy_52 .glasses,
+        html.ie8 .sexy#sexy_52 .glasses {
+            background-color: #e6e2d5;
+        }
+
+    .sexy#sexy_52 .row.inner {
+        background-color: #ffffff;
+    }
+
+
+.sexy#sexy_53 {
+    background-image: url(http://eerstelinks.nl/images/camperplaatszierikzee_20130423031111.jpg);
+    color: #333333;
+}
+
+    .sexy#sexy_53 .glasses {
+        background-color: rgba(230, 226, 213, 0.85);
+    }
+
+        html.ie6 .sexy#sexy_53 .glasses,
+        html.ie7 .sexy#sexy_53 .glasses,
+        html.ie8 .sexy#sexy_53 .glasses {
+            background-color: #e6e2d5;
+        }
+
+    .sexy#sexy_53 .row.inner {
+        background-color: #ffffff;
+    }
+
+
+.sexy#sexy_123 {
+    background-image: url(../../../images/camperplaatszierikzee_20130517134725.jpg);
+    color: #333333;
+}
+
+    .sexy#sexy_123 .glasses {
+        background-color: rgba(229, 230, 227, 0.85);
+    }
+
+        html.ie6 .sexy#sexy_123 .glasses,
+        html.ie7 .sexy#sexy_123 .glasses,
+        html.ie8 .sexy#sexy_123 .glasses {
+            background-color: #e5e6e3;
+        }
+
+    .sexy#sexy_123 .row.inner {
+        background-color: #ffffff;
+    }
